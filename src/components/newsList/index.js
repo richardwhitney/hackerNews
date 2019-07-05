@@ -4,7 +4,7 @@ import NewsItem from '../newsItem';
 export default class NewsList extends Component {
   render() {
     let newsPosts = this.props.posts.map((post, index) => (
-      <NewsItem key={post.id} post={post}/>
+      <NewsItem key={post.id} post={post} upvoteHandler={this.props.upvoteHandler}/>
     ));
     return (
       <Fragment>{newsPosts}</Fragment>
