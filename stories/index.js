@@ -15,7 +15,9 @@ const post = {
   upvotes: 10
 };
 
-storiesOf("Hacker App/News Form", module).add("default", () => <NewsForm/>);
+storiesOf("Hacker App/News Form", module).add("default", () => (
+  <NewsForm handleAdd={action("Add new post: ")}/>
+));
 
 storiesOf("Hacker App/News Item", module)
   .add('default', () => <NewsItem post={post} upvoteHandler={action("upvoted")}/>)
