@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
 export default class Form extends Component {
-  state = { comment: "", name: ""};
+  state = { comment: "", name: "" };
 
   handleCommentChange = e => {
-    this.setState({comment: e.target.value});
+    this.setState({ comment: e.target.value });
   };
 
   handleNameChange = e => {
-    this.setState({name: e.target.value});
+    this.setState({ name: e.target.value });
   };
 
   onSubmit = e => {
@@ -19,7 +19,7 @@ export default class Form extends Component {
       return;
     }
     this.props.addCommentHandler(comment, name);
-    this.setState({comment: "", name: ""});
+    this.setState({ comment: "", name: "" });
   };
 
   render() {
@@ -45,7 +45,13 @@ export default class Form extends Component {
             onChange={this.handleNameChange}
           />
         </div>
-        <button type="submit" className="btn btn-primary" onClick={this.onSubmit}>Submit</button>
+        <button
+          type="submit"
+          className="btn btn-primary"
+          onClick={this.onSubmit}
+        >
+          Submit
+        </button>
       </form>
     );
   }
